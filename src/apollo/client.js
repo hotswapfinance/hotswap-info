@@ -28,7 +28,7 @@ export const v1Client = new ApolloClient({
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://graph.bitbd.pro/subgraphs/name/blockartist/bsc-blocks/graphql'
+    uri: 'https://graph.bitbd.pro/subgraphs/name/blockartist/bsc-blocks'
   }),
   cache: new InMemoryCache()
 })
