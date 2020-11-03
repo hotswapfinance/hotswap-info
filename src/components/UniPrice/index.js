@@ -24,9 +24,9 @@ function formatPercent(rawPercent) {
 }
 
 export default function UniPrice() {
-  const daiPair = usePairData('0xa54E26535094150563B95F79AeDB7Fd765f9E3c4')
-  const usdcPair = usePairData('0xcBb3A9d94aa3B990B9a4A8fc7d57C391d05Df9E5')
-  const usdtPair = usePairData('0xAc3f9eC371D24720cE9ea5Cbf6e3dEF3Cd4f5CE6')
+  const daiPair = usePairData('0xa478c2975ab1ea89e8196811f51a7b7ade33eb11')
+  const usdcPair = usePairData('0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc')
+  const usdtPair = usePairData('0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852')
 
   const totalLiquidity = useMemo(() => {
     return daiPair && usdcPair && usdtPair
@@ -35,7 +35,7 @@ export default function UniPrice() {
   }, [daiPair, usdcPair, usdtPair])
 
   const daiPerEth = daiPair ? parseFloat(daiPair.token0Price).toFixed(2) : '-'
-  const usdcPerEth = usdcPair ? parseFloat(usdcPair.token1Price).toFixed(2) : '-'
+  const usdcPerEth = usdcPair ? parseFloat(usdcPair.token0Price).toFixed(2) : '-'
   const usdtPerEth = usdtPair ? parseFloat(usdtPair.token1Price).toFixed(2) : '-'
 
   return (

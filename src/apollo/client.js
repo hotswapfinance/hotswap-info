@@ -4,7 +4,7 @@ import { HttpLink } from 'apollo-link-http'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://graph.hotdog.cafe/subgraphs/name/blockartist/hotswap'
+    uri: 'https://graph.hotdog.cafe/subgraphs/name/bscdev/hotswap2'
   }),
   cache: new InMemoryCache(),
   shouldBatch: true
@@ -28,7 +28,7 @@ export const v1Client = new ApolloClient({
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://graph.hotdog.cafe/subgraphs/name/blockartist/bsc-blocks'
+    uri: 'https://graph.hotdog.cafe/subgraphs/name/bscdev/bsc-blocks'
   }),
   cache: new InMemoryCache()
 })

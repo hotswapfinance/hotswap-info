@@ -1,4 +1,4 @@
-export const FACTORY_ADDRESS = '0x29EA79d877558b60e3EeeB5FFB6361E75fc4580c'
+export const FACTORY_ADDRESS = '0xBCfCcbde45cE874adCB698cC183deBcF17952812'
 
 export const BUNDLE_ID = '1'
 
@@ -12,7 +12,7 @@ export const timeframeOptions = {
 
 // token list urls to fetch tokens from - use for warnings on tokens and pairs
 export const SUPPORTED_LIST_URLS__NO_ENS = [
-  'https://raw.githubusercontent.com/hotswapfinance/hotswap-web/master/src/constants/token/hotswap.json'
+  'https://raw.githubusercontent.com/pancakeswap/pancake-swap-interface/master/src/constants/token/pancakeswap.json'
 ]
 
 // hide from overview list

@@ -58,14 +58,14 @@ export function getPoolLink(token0Address, token1Address = null, remove = false)
     return (
       `https://exchange.pancakeswap.finance/#/` +
       (remove ? `remove` : `add`) +
-      `/${token0Address === '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' ? 'ETH' : token0Address}/${'ETH'}`
+      `/${token0Address === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' ? 'ETH' : token0Address}/${'ETH'}`
     )
   } else {
     return (
       `https://exchange.pancakeswap.finance/#/` +
       (remove ? `remove` : `add`) +
-      `/${token0Address === '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' ? 'ETH' : token0Address}/${
-        token1Address === '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' ? 'ETH' : token1Address
+      `/${token0Address === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' ? 'ETH' : token0Address}/${
+        token1Address === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' ? 'ETH' : token1Address
       }`
     )
   }
@@ -76,8 +76,8 @@ export function getSwapLink(token0Address, token1Address = null) {
     return `https://exchange.pancakeswap.finance/#/swap?inputCurrency=${token0Address}`
   } else {
     return `https://exchange.pancakeswap.finance/#/swap?inputCurrency=${
-      token0Address === '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' ? 'ETH' : token0Address
-    }&outputCurrency=${token1Address === '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' ? 'ETH' : token1Address}`
+      token0Address === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' ? 'ETH' : token0Address
+    }&outputCurrency=${token1Address === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' ? 'ETH' : token1Address}`
   }
 }
 
@@ -307,8 +307,8 @@ export const Big = number => new BigNumber(number)
 
 export const urls = {
   showTransaction: tx => `https://bscscan.com/tx/${tx}/`,
-  showAddress: address => `https://www.etherscan.io/address/${address}/`,
-  showToken: address => `https://www.etherscan.io/token/${address}/`,
+  showAddress: address => `https://bscscan.com/address/${address}/`,
+  showToken: address => `https://bscscan.com/token/${address}/`,
   showBlock: block => `https://bscscan.com/block/${block}/`
 }
 
